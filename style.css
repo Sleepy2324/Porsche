@@ -1,0 +1,401 @@
+@font-face {
+    font-family: "Cormorant Infant";
+    src: url("fonts/CormorantInfant-Light.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Cormorant Infant";
+    src: url("fonts/CormorantInfant-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Cormorant Infant";
+    src: url("font/CormorantInfant-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Cormorant Infant";
+    src: url("font/CormorantInfant-SemiBold.ttf");
+    font-weight: 700;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Infant', serif;
+}
+html{
+    font-size: 25px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+h1{
+    font-size: 8rem;
+    font-weight: 300;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 400;
+}
+h3{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.header {
+    width: calc(100% - 150px);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.header-content {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.header-content:hover .header-top{
+    transform: translateY(-100%);
+}
+.header-content:hover .header-bottom{
+    transform: translateY(100%);
+}
+.header-content:hover .header-text{
+    color: white;
+}
+.header-top {
+    width: 100%;
+    height: 51%;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    transition: 0.6s;
+}
+.header-bottom {
+    width: 100%;
+    height: 51%;
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transition: 0.6s;
+}
+.header-video{
+    height: 99%;
+    width: 100%;
+    object-fit: cover;
+}
+.nav{
+    height: 100vh;
+    width: 150px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 1px 1px 30px black;
+    text-align: center;
+    padding: 10px;
+}
+.nav-link::before{
+    content: "";
+    background-color: rgba(141, 69, 69, 1);
+    position: absolute;
+    color: white;
+    width: 0px;
+    height: 50px;
+    left: 0px;
+    line-height: 45px;
+    top: -50px;
+    overflow: hidden;
+    
+}
+.nav-link:hover::before{
+    width: 150px;
+    left: -160px;
+    transition: 0.5s;
+}
+.nav-link:hover img{
+    background-color: rgba(141, 69, 69, 1);
+}
+.nav-link{
+    position: relative;
+}
+.nav-link:nth-of-type(1)::before{
+    content: "Главная";
+}
+.nav-link:nth-of-type(2)::before{
+    content: "История";
+}
+.nav-link:nth-of-type(3)::before{
+    content: "Этапы";
+}
+.nav-link:nth-of-type(4)::before{
+    content: "Модели";
+}
+.history {
+    width: 100%;
+    margin-bottom: 150px;
+    margin-top: 100px;
+}
+.history-container {
+    width: 1400px;
+    height: 700px;
+    border: 2px solid black;
+    margin: auto;
+    display: flex;
+    padding: 20px;
+}
+.history-left {
+    width: 50%;
+    height: 100%;
+    padding-right: 3%;
+}
+.history-left h2::first-letter{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.history-left p::first-line{
+    font-weight: bold;
+}
+.history-right {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header-text {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    transition: 1s;
+
+}
+.header-text-top {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+.header-text-top h1{
+    letter-spacing: 46%;
+}
+.header-text-bottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-text-bottom a{
+    text-decoration: none;
+    color: white;
+    background-color: rgba(141, 69, 69, 1);
+    height: 115px;
+    width: 495px;
+    text-align: center;
+    line-height: 105px;
+    border-radius: 10px;
+}
+.header-img-left {
+    transform: translateY(6px) translateX(10px);
+}
+.header-img-right {
+    transform: translateY(6px) translateX(-10px);
+}
+.history-animation{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: slidinganim 10s linear infinite;
+}
+.history-animation img{
+    width: 100%;
+    height: 100%;
+}
+
+.key-moments {
+    margin-bottom: 150px;
+    margin-top: 100px;
+}
+.key-container {
+    width: 1400px;
+
+    border: 2px solid black;
+    margin: auto;   
+    padding: 20px;
+}
+.key-container h2::first-letter{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.key-container h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.key-window {
+    height: 2rem;
+    overflow: hidden;
+}
+.window-moments {
+    animation: keyslidinganim 10s linear infinite;
+}
+.window-moments p{
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+.window-moments img{
+    position: relative;
+    bottom: -7px;
+    left: -5px;
+}
+
+.models {
+    margin-bottom: 150px;
+    margin-top: 100px; 
+}
+.models-container {
+    width: 1400px;
+    border: 2px solid black; 
+    padding: 20px;
+    margin: auto;
+}
+.card-img1{
+    align-self: right;
+}
+.models-card {
+    display: flex;
+    position: relative;
+    padding-bottom: 40px;
+    justify-content: left;
+}
+.models-card2 {
+    display: flex;
+    position: relative;
+    padding-bottom: 40px;
+    justify-content: right;
+}
+.car-card {
+    z-index: 100;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
+    width: 550px;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-0%, -50%);
+    background-color: white;
+    transition: 1s;
+}
+.car-card::before{
+    content: "";
+    width: 55%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 1s;     
+}
+.car-card::after{
+    content: "";
+    width: 55%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 1s;      
+}
+.car-card:hover::before{
+    width: 100%;
+}
+.car-card:hover::after{
+    width: 100%;
+}
+.car-card2:hover::before{
+    width: 100%;
+}
+.car-card2:hover::after{
+    width: 100%;
+}
+.car-card2::before{
+    content: "";
+    width: 55%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;  
+    transition: 1s;  
+}
+.car-card2::after{
+    content: "";
+    width: 55%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 1s;     
+}
+.car-card2 {
+    z-index: 100;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
+    width: 550px;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(-0%, -50%);
+    background-color: white;
+}
+
+.car-card h3{
+    padding-bottom: 25px;
+}
+
+.footer {
+    padding-bottom: 100px;
+}
+.footer-container {
+    width: 1400px;
+    border: 2px solid black; 
+    padding: 20px;
+    margin: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes slidinganim {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+
+@keyframes keyslidinganim {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateY(-14rem);
+    }
+}
